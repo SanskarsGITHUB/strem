@@ -4,7 +4,7 @@ from datetime import datetime
 import base64
 
 # Load the CSV file
-data = pd.read_csv('trending_news_.csv')
+data = pd.read_csv('trending_news_cleaned.csv')
 
 # Convert created_at to datetime format, trying first with seconds, then without
 data['created_at'] = pd.to_datetime(data['created_at'], format='%d-%m-%Y %H:%M:%S', errors='coerce')
